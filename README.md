@@ -1,6 +1,6 @@
 # Energy Market Intelligence
 
-Agent-native wholesale power telemetry. Spring Boot API. Next.js 16 dashboard. Five deterministic ISO markets.
+Agent-native wholesale power telemetry. A Spring Boot API serving five deterministic ISO markets, with a Next.js 16 dashboard on top. Built so agents and humans read the same data.
 
 ```mermaid
 flowchart LR
@@ -10,7 +10,7 @@ flowchart LR
   CI --> UI
 ```
 
-## Run locally
+## Quickstart
 
 Requires **Node 26**, **pnpm 11**, Java 22+, Maven 3.9+.
 
@@ -23,6 +23,13 @@ cd frontend && corepack enable && pnpm install && pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+## What it does
+
+- **Five deterministic ISO markets.** CAISO, ERCOT, MISO, NEISO, PJM. Same seed, same output. Reproducible telemetry for testing and evals.
+- **Reactive API.** Spring WebFlux backend with streaming endpoints. LMP, load, and generation mix per ISO.
+- **Live dashboard.** Next.js 16 with TanStack Query and Chart.js. Price curves, heatmaps, and market comparison views.
+- **Agent-native.** Claude Code workflows, skills, and CI evals run against the same API the dashboard uses. One data source for both.
 
 ## Stack
 
